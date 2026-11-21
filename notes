@@ -1,0 +1,130 @@
+Firewall - have policies to determine default connection rules. Domain computers - set them all the same. Can be configured by group policy as well or domain wide. Inound vs outbound rules. 
+Inbound rules - web servers, smb, databases
+Outbound rules
+Default - inbound connections denied, outbound allowed
+
+Wf.msc - windows advanced firewalls
+Ex. rdp allow it to not get in the machine. Remove rules that attacker is adding
+New rule - 
+Use firefox executable - allow it to outbound. 
+
+
+WFP - big wrapper for wfp - engine under advanced firewall
+
+Persistence - autoruns
+Red = bad
+shows things that are on startup
+Sysinternals
+Certificates - ways to prove that it is legit
+
+Powershell profiles
+Configuration of commands whenever you start a session with a specific user
+You can set alias that are wrong 
+If it doesn’t work it is null
+Everything
+
+A search engine that locates files and folders by filename instantly
+Its better than windows search because its a lot faster and can search file content
+Supports search with logical operators and file extensions
+Ex. *.exe, finds everything with exe
+Ex. powershell_profile.ps1
+
+Services 
+
+IIS Manager (iis.msc) (install this)
+Ways to backup iis is to zip inetpub
+The root for iis
+Firewall - inbound 0.0.0.0:80
+– app that allows for configuration sites authentication, cgi, directory browsing, logging, server certificates
+Server manager
+Go into iis and remove certain things
+Handler mapping
+Remove read access to the files
+Binds are what port web services are listening on
+
+Shared folders (fsmgmt.msc)
+File sharing allows others on the networks to files and directories
+Allows you to close shares
+
+Never have C: drive shared. If you connect to the C drive using smb
+See file permissions
+
+SMB - backup smb by zipping up the shares , and noting down the share names
+Port 445, manage with. Allow inbound for 445
+
+MYSQL - ways to backup mysql is to dump it with mysqldump
+Mysqldump -u root -p database > C:\backups\backup.sql
+Download backups for all of the computers
+
+Tomoe check it out
+
+Server manager (servermanager.exe)
+Shows windows native servers
+Shows status and best practices
+
+Event viewer (eventvwr.msc)
+All events on a windows computer
+Example ids - successful logon = 4624 unsuccessful logon = 4625
+Get bearings about what happened on a computer
+
+Advanced system settings (sysdm.cpl)
+DNS management console
+
+Ping webserver from domain controller
+Backup forward and reverse lookup zones 
+
+User auditing
+Only needed service accounts and authorized users should be on a system
+Accounts should only be in groups they are authorized to be in. Ex: an intern should not be in the admin group
+User’s passwords should expire
+Guest and admin account should be disabled
+Local users and groups (lusrmgr.msc)
+Allows for account management with detailed information about users and groups
+On a domain-controller, an admin would become the domain on all computers
+When signing in .\Administrator anything before the backlash is what you are authenticating against
+Registry
+Huge databases of windows settings
+Turn keys on or off
+Be careful
+
+Account policies
+Set the standard for password compositions, length, complexity, and how they are stored.
+This is in the registry
+
+Security policies
+Audit policy defines what events are written to security logs
+User right assignment govern methods by which users can log on to a system
+Security options configure behavior
+Group Policy
+Easy and portable way to apply configurations to the system and users through group policy settings
+There is a way to disable group policy
+Windows Defender firewall
+Can be outbound and inbound
+All rules have a profile of public, private, domain, or all.
+
+Task scheduler - allows tasks, scripts, and tasks to be executed at specific intervals or events comparable to cron
+Could be used to create persistence
+
+Services and sc (service control) - an executable microsoft provides for the command line
+Sc create windowsbackdoor binpath=”c:\nc.exe” - create, stop, start, delete or configure services
+
+File management
+Everything tool
+
+Appwiz.cpl
+Menu in control panel that allows users to easily remove programs or add/remove their features
+
+Shellbagsviewers
+Shell bags are registry keys that store info about view settings
+
+Process explorer
+Useful for viewing running processes and child processes
+
+Windows core 
+Simplewall - firewall you can get on windows to block any connection
+
+Autoruns and simplewall and process explorer
+
+First half is service breaks and injects, second half is threat-hunting
+
+Credential windows manager 
