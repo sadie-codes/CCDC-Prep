@@ -1,0 +1,18 @@
+Absolutely. The most important distinction is that before noon, you're maintaining services and completing business requests; after noon, you're allowed to focus on threat hunting and removing unauthorized changes. Don't start removing suspicious-looking things early just because they look unusual—the competition rules specifically prohibit that before noon.
+Before noon: maintain and respond
+Your priorities should be:
+1. Get oriented. Identify each server, its IP address, its assigned role, and which services it is supposed to provide.
+2. Check service health. Confirm that required services are running and that websites, databases, DNS, email, and file sharing work where applicable.
+3. Protect availability. If a service is down, troubleshoot it carefully. Check the service, its dependencies, configuration, network connectivity, and relevant event logs.
+4. Complete injects. Read each scoreboard request, note its deadline and required deliverable, complete it, and submit it in the requested format.
+5. Document changes. Record what you changed, on which machine, and why.
+Do not remove suspected attacker persistence, delete unfamiliar accounts, or disable unfamiliar services before noon. Preserve the whiteteam account and follow the whitelist.
+After noon: threat hunting and cleanup
+Once the competition enters its second phase:
+1. Review suspicious accounts, administrator memberships, services, scheduled tasks, startup entries, firewall rules, and processes.
+2. Compare what you find against your earlier inventory and the competition's whitelist.
+3. Investigate suspicious findings before changing anything.
+4. Remove confirmed unauthorized changes using careful, documented steps.
+5. Recheck the required services after each significant change.
+6. Keep monitoring the scoreboard and completing any remaining requests.
+A useful habit throughout the day: check → understand → change → verify → document.
