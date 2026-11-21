@@ -1,0 +1,60 @@
+Remember: completing the work and submitting the requested deliverable are two separate steps!
+5. Competition workflow
+Before noon
+Maintain services
+- [ ] Identify machine roles and expected services.
+- [ ] Capture approved configuration snapshots.
+- [ ] Check service availability.
+- [ ] Check network connectivity and DNS.
+- [ ] Complete business injects.
+- [ ] Record changes and submit deliverables.
+- [ ] Do not remove suspected Red Team implants.
+  
+  
+  After noon
+  Threat hunting phase
+- [ ] Review suspicious accounts and privileges.
+- [ ] Investigate suspicious scheduled tasks and services.
+- [ ] Review startup persistence and firewall changes.
+- [ ] Compare findings with whitelists.
+- [ ] Remove confirmed unauthorized changes according to team procedures.
+- [ ] Verify required services remain operational.
+
+One thing I need to know to finish your toolkit
+Your competition machines have different roles, so I don't want to give you generic scripts that don't fit them.
+What database engines are you expecting?
+
+MySQL / MariaDB
+
+Microsoft SQL Server
+
+PostgreSQL
+
+SQLite
+
+I don't know yet
+
+
+What access will you have?
+
+PowerShell on each Windows server
+
+Remote Desktop
+
+Both
+
+Not sure
+
+
+What should I prioritize next?
+
+Database and configuration backups
+
+Account and privilege auditing
+
+IIS and website diagnostics
+
+A complete organized toolkit
+
+Submit
+My biggest advice: Don't try to win by running the most scripts. Win by understanding what each machine does, keeping its required services alive, handling injects correctly, and making careful changes you can explain.
